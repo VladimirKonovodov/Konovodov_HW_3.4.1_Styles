@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+     <string name="HelloWorld">
+            \tThe Captive\n
+            A captive, alone in a dungeon I dwell,\n
+            Entombed in the stillness and murk of a cell.\n
+            Outside, in the courtyard, in wild, frenzied play,\n
+            My comrade, an eagle, has pounced on his prey.\n
+            Translated by I.Zheleznova.
+            </string>
+
+</resources>
