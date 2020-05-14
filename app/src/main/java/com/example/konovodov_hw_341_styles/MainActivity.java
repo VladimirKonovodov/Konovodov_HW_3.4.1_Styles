@@ -14,6 +14,11 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
+    public final static int BLACK = 0;
+    public final static int GREEN = 1;
+    public final static int BLUE = 2;
+
+
     private static Button button;
 
     public static Locale locale;
@@ -36,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                initColorsChange(mColorsSpinner.getSelectedItem().toString());
+                initColorsChange(mColorsSpinner.getSelectedItemPosition());
                 initLanguagesChange(mLanguagesSpinner.getSelectedItem().toString());
             }
         });
@@ -98,34 +103,23 @@ public class MainActivity extends AppCompatActivity {
         recreate();
     }
 
-    private void initColorsChange(String color) {
+    private void initColorsChange(int color) {
         ArrayAdapter<CharSequence> adapter = null;
         switch (color) {
 
-            case "Черный": {
+            case BLACK: {
                 currentThemeRes = R.style.ThemeBlack;
                 break;
             }
-            case "Зеленый": {
+            case GREEN: {
                 currentThemeRes = R.style.ThemeGreen;
                 break;
             }
-            case "Синий": {
+            case BLUE: {
                 currentThemeRes = R.style.ThemeBlue;
                 break;
             }
-            case "Black": {
-                currentThemeRes = R.style.ThemeBlack;
-                break;
-            }
-            case "Green": {
-                currentThemeRes = R.style.ThemeGreen;
-                break;
-            }
-            case "Blue": {
-                currentThemeRes = R.style.ThemeBlue;
-                break;
-            }
+            
             default:
                 break;
 
